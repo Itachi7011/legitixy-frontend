@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import './App.css'
 import "./css/Public/Homepage.css"
+import "./css/Public/FamilyLaws.css"
 // import "./css/Public/SubsriptionPlans.css"
 // import "./css/Public/GlobalPrivacyPolicy.css"
 // import "./css/Public/TermsofService.css"
@@ -73,6 +74,7 @@ import Footer from './components/Footer';
 // import NotificationAlertDisplay from './components/Footer';
 import FloatingActionButton from './components/FloatingActionButton';
 import Homepage from './pages/Public/Homepage';
+import FamilyLaws from './pages/Public/FamilyLaws';
 // import SubsriptionPlans from './pages/Public/SubsriptionPlans';
 // import GlobalPrivacyPolicy from './pages/Public/GlobalPrivacyPolicy';
 // import TermsofService from './pages/Public/TermsofService';
@@ -156,6 +158,7 @@ function App() {
           {/* <AdminNavSidebar /> */}
           <Routes>
             <Route path="/" element={<Homepage />} />
+            <Route path="/family-laws" element={<FamilyLaws />} />
             {/* <Route path="/pricing" element={<SubsriptionPlans />} />
             <Route path="/privacy-policy" element={<GlobalPrivacyPolicy />} />
             <Route path="/TermsofService" element={<TermsofService />} />
