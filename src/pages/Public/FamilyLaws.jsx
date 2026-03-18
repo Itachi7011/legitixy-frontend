@@ -11,6 +11,8 @@ import {
   Sparkles, AlertTriangle, Layers, Search, PenLine
 } from 'lucide-react';
 import { ThemeContext } from '../../context/ThemeContext';
+import familly1 from "../../images/familly1.jpg"
+
 
 // ─────────────────────────────────────────────────────────────────────────────
 // DATA
@@ -354,15 +356,20 @@ function AccordionItem({ q, a, index }) {
   );
 }
 
-function ImageSlot({ label, hint, aspect = '4/3', icon: Icon = Eye }) {
+function ImageSlot({ label, hint, aspect = '4/3', icon: Icon = Eye, src, alt }) {
   return (
     <div className="legitixy-fl-img-slot" style={{ aspectRatio: aspect }}>
       <div className="legitixy-fl-img-slot-inner">
-        <Icon size={28} className="legitixy-fl-img-slot-icon" />
-        <span className="legitixy-fl-img-slot-label">{label}</span>
-        {hint && <span className="legitixy-fl-img-slot-hint">{hint}</span>}
+        {src ? (
+          <img src={src} alt={alt || label} className="legitixy-fl-img-slot-img" />
+        ) : (
+          <>
+            <Icon size={28} className="legitixy-fl-img-slot-icon" />
+            <span className="legitixy-fl-img-slot-label">{label}</span>
+            {hint && <span className="legitixy-fl-img-slot-hint">{hint}</span>}
+          </>
+        )}
       </div>
-      {/* To add an image: replace this div's content with <img src="..." alt="..." /> */}
     </div>
   );
 }
@@ -483,7 +490,7 @@ const FamilyLaws = () => {
         </div>
 
         <div className="legitixy-fl-hero-visual">
-          <ImageSlot label="Hero — Family Law / Justice" hint="800×700px or any — auto-fit" aspect="3/4" icon={Scale} />
+          <ImageSlot label="Hero — Family Law / Justice" hint="800×700px or any — auto-fit" aspect="3/4" icon={Scale}  src={familly1}  alt="Family Law Hero Visual" />
           <div className="legitixy-fl-hero-float-a">
             <CheckCircle size={13} />
             <span>Court-Verified Content</span>
