@@ -11,7 +11,16 @@ import {
   Sparkles, AlertTriangle, Layers, Search, PenLine
 } from 'lucide-react';
 import { ThemeContext } from '../../context/ThemeContext';
+
 import familly1 from "../../images/familly1.jpg"
+import womenRights from "../../images/womenRights.jpg"
+import WifeRights from "../../images/WifeRights.jpg"
+import court1 from "../../images/courts/Supreme_Court_of_India.jpg";
+import court6 from "../../images/courts/delhi.jpg";
+import lawyerFAQ from "../../images/lawyerFAQ.jpg";
+import lawyerTeam from "../../images/lawyerTeam.jpg";
+import indianJusticeSystem from "../../images/indianJusticeSystem.jpg";
+import lawBooks from "../../images/lawBooks.jpg";
 
 
 // ─────────────────────────────────────────────────────────────────────────────
@@ -554,7 +563,7 @@ const FamilyLaws = () => {
             </div>
 
             <div className="legitixy-fl-aside-stack">
-              <ImageSlot label="Overview — Indian Justice System" hint="Any size — fits perfectly" aspect="3/4" icon={Landmark} />
+              <ImageSlot src={indianJusticeSystem} label="Overview — Indian Justice System" hint="Any size — fits perfectly" aspect="3/4" icon={Landmark} />
               <div className="legitixy-fl-quick-act-list">
                 <h3 className="legitixy-fl-aside-title"><BookMarked size={15} /> Applicable Laws at a Glance</h3>
                 {[
@@ -631,7 +640,7 @@ const FamilyLaws = () => {
 
           {/* Wide image for legal framework */}
           <div className="legitixy-fl-banner-img-wrap">
-            <ImageSlot label="Legal Framework / Law Books / Statute Image" hint="Wide banner — any width × 200–400px height" aspect="21/5" icon={BookOpen} />
+            <ImageSlot src={lawBooks} label="Legal Framework / Law Books / Statute Image" hint="Wide banner — any width × 200–400px height" aspect="21/5" icon={BookOpen} />
           </div>
         </div>
       </section>
@@ -683,7 +692,7 @@ const FamilyLaws = () => {
 
           {/* Rights banner image */}
           <div className="legitixy-fl-banner-img-wrap">
-            <ImageSlot label="Rights & Empowerment Banner" hint="1400×350px — any aspect works" aspect="16/4" icon={Shield} />
+            <ImageSlot src={womenRights}  label="Rights & Empowerment Banner" hint="1400×350px — any aspect works" aspect="16/4" icon={Shield} />
           </div>
 
           <div className="legitixy-fl-rights-wrap">
@@ -706,7 +715,7 @@ const FamilyLaws = () => {
                 </div>
                 {/* Per-category image slot */}
                 <div className="legitixy-fl-rights-img-slot">
-                  <ImageSlot label={`${category} — Rights Image`} hint="Any size — auto-fit" aspect="16/5" icon={Icon} />
+                  <ImageSlot src={WifeRights} label={`${category} — Rights Image`} hint="Any size — auto-fit" aspect="16/5" icon={Icon} />
                 </div>
               </div>
             ))}
@@ -761,7 +770,7 @@ const FamilyLaws = () => {
               </div>
             </div>
             <div>
-              <ImageSlot label="Delhi Courts Map / Building" hint="Any size — auto-contained" aspect="4/3" icon={Building2} />
+              <ImageSlot src={court1} label="Delhi Courts Map / Building" hint="Any size — auto-contained" aspect="4/3" icon={Building2} />
             </div>
           </div>
         </div>
@@ -898,7 +907,7 @@ const FamilyLaws = () => {
           </div>
 
           <div className="legitixy-fl-two-col-equal" style={{ marginTop: '2.5rem' }}>
-            <ImageSlot label="Delhi Court Building / Legal Aid Centre" hint="Any size — auto-fit" aspect="4/3" icon={Building2} />
+            <ImageSlot src={court6} label="Delhi Court Building / Legal Aid Centre" hint="Any size — auto-fit" aspect="4/3" icon={Building2} />
             <div className="legitixy-fl-legal-aid-cards">
               {LEGAL_AID_INFO.map(org => (
                 <div className="legitixy-fl-legal-aid-card" key={org.org}>
@@ -1007,7 +1016,7 @@ const FamilyLaws = () => {
           </div>
 
           <div className="legitixy-fl-banner-img-wrap" style={{ marginTop: '2.5rem' }}>
-            <ImageSlot label="Lawyer / FAQ Illustration" hint="Portrait or landscape — both work" aspect="16/5" icon={HelpCircle} />
+            <ImageSlot src={lawyerFAQ} label="Lawyer / FAQ Illustration" hint="Portrait or landscape — both work" aspect="16/5" icon={HelpCircle} />
           </div>
         </div>
       </section>
@@ -1081,7 +1090,7 @@ const FamilyLaws = () => {
               </div>
             </div>
             <div className="legitixy-fl-consult-visual">
-              <ImageSlot label="Lawyer / Team / Office Photo" hint="400×500px portrait or any size" aspect="4/5" icon={Users} />
+              <ImageSlot src={lawyerTeam} label="Lawyer / Team / Office Photo" hint="400×500px portrait or any size" aspect="4/5" icon={Users} />
               <div className="legitixy-fl-consult-badges">
                 <div className="legitixy-fl-consult-badge"><Star size={13} /> 4.9/5 Client Rating</div>
                 <div className="legitixy-fl-consult-badge"><Calendar size={13} /> Free First Session</div>
